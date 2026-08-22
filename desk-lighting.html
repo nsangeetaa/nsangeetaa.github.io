@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Desk Lighting — The Ruled Line</title>
-<meta name="description" content="Warm lamps, monitor light bars, and bias lighting that make a desk look considered on camera and easier to sit at at night.">
+<meta name="description" content="Warm lamps, monitor light bars, and bias lighting for a considered desk.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#f6f2ea;--ink:#22283a;--ink-soft:#565f78;--rose:#c17a72;--sage:#8a9a7e;--rule:#d9d0bf;}
+  :root{--paper:#f6f2ea;--ink:#22283a;--ink-soft:#565f78;--rose:#c17a72;--sage:#8a9a7e;--rule:#d9d0bf;--card:#fffefb;}
   *{box-sizing:border-box;}
   body{margin:0;background:var(--paper);background-image:linear-gradient(var(--rule) 1px, transparent 1px);background-size:100% 2.1em;background-position:0 7.4em;color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:680px;margin:0 auto;padding:0 24px 100px;}
@@ -28,15 +28,22 @@
   p{margin:0 0 20px;font-size:16.5px;}
   h2{font-family:'Fraunces',serif;font-weight:600;font-size:26px;margin:44px 0 6px;}
   .disclosure{background:#fff;border:1px solid var(--rule);border-radius:2px;padding:14px 18px;font-size:13.5px;color:var(--ink-soft);margin:8px 0 36px;}
-  .pick{background:#fffefb;border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
+  .pick{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
   .pick-num{font-family:'Space Mono',monospace;font-size:11px;color:var(--sage);letter-spacing:.08em;text-transform:uppercase;}
   .pick h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;}
   .pick .best-for{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin-bottom:12px;line-height:1.5;}
   .pick p{font-size:15.5px;margin-bottom:14px;}
-  .buy-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
-  .buy-btn:hover{background:var(--rose);transform:translateY(-1px);}
-  .buy-btn::after{content:"→";font-family:sans-serif;}
-  ul.plain{margin:0 0 20px;padding-left:0;list-style:none;}
+  .buy-btn,.guide-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
+  .buy-btn:hover,.guide-btn:hover{background:var(--rose);transform:translateY(-1px);}
+  .buy-btn::after,.guide-btn::after{content:"→";font-family:sans-serif;}
+  .guide-btn{background:var(--rose);}
+  .guide-btn:hover{background:var(--ink);}
+  .teaser{display:block;background:var(--card);border:1.5px dashed var(--rose);border-radius:2px;padding:22px 24px;margin:0 0 18px;text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease;}
+  .teaser:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(34,40,58,.08);}
+  .teaser-label{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);}
+  .teaser h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;color:var(--ink);}
+  .teaser p{font-size:15.5px;margin-bottom:16px;color:var(--ink-soft);}
+  ul.plain{margin:0 0 28px;padding-left:0;list-style:none;}
   ul.plain li{padding-left:26px;position:relative;margin-bottom:10px;font-size:15.5px;}
   ul.plain li::before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border:1.5px solid var(--sage);border-radius:2px;}
   .pin-cta{margin:52px 0 20px;padding:26px;background:var(--ink);color:var(--paper);border-radius:3px;text-align:center;}
@@ -47,8 +54,8 @@
   .related a:hover{color:var(--rose);}
   footer{max-width:680px;margin:60px auto 0;padding:24px;border-top:2px solid var(--ink);font-family:'Space Mono',monospace;font-size:11.5px;color:var(--ink-soft);text-align:center;}
   @media (prefers-reduced-motion: reduce){
-    .buy-btn{transition:none;}
-    .buy-btn:hover{transform:none;}
+    .buy-btn,.guide-btn,.teaser{transition:none;}
+    .buy-btn:hover,.guide-btn:hover,.teaser:hover{transform:none;}
   }
 </style>
 </head>
@@ -63,12 +70,9 @@
   <h1>Desk Lighting</h1>
   <p class="dek">The fastest way to make a setup look intentional on camera — and the difference between a late study session that feels harsh versus one you can actually sit through.</p>
   <p class="also-on">Also featured on: <a href="home-office-on-a-budget.html">Home Office on a Budget</a> · <a href="desk-setup-ideas.html">Desk Setup Ideas</a></p>
-  <div class="meta"><span>5 min read</span><span>Updated Aug 2026</span><span>Lighting</span></div>
-
+  <div class="meta"><span>5 min read</span><span>Updated Aug 2026</span></div>
   <div class="disclosure"><strong>A quick note:</strong> Some links on this page are Amazon affiliate links. If you buy through them, this site earns a small commission at no extra cost to you.</div>
-
   <p>Overhead room lights flatten faces on video calls and bounce off screens. A small lamp at the desk, plus something behind the monitor if you have one, does more for “this looks like a real workspace” than another organizer.</p>
-
   <h2>What to actually look for</h2>
   <ul class="plain">
     <li>Warm or adjustable color temperature — cool white reads like a waiting room</li>
@@ -76,15 +80,13 @@
     <li>A real dimmer, not just on/off</li>
     <li>A small footprint: clamp, clip, or a base that fits beside a notebook</li>
   </ul>
-
   <div class="pick">
     <span class="pick-num">Pick 01</span>
     <h3>The Warm LED Desk Lamp</h3>
     <p class="best-for">Best for: anyone doing video calls or late work sessions</p>
-    <p>Swaps out harsh overhead light for something warmer — makes the whole desk area look considered instead of thrown together, usually for less than a dinner out. Look for a dimmer and a head that actually aims at the page, not the ceiling.</p>
+    <p>Swaps out harsh overhead light for something warmer — makes the whole desk area look considered instead of thrown together. Look for a dimmer and a head that actually aims at the page, not the ceiling.</p>
     <a class="buy-btn" href="https://www.amazon.com/s?k=warm+led+desk+lamp&tag=YOURTAG-20">Check price on Amazon</a>
   </div>
-
   <div class="pick">
     <span class="pick-num">Pick 02</span>
     <h3>The Monitor Light Bar</h3>
@@ -92,7 +94,6 @@
     <p>Sits on top of the screen and throws light down onto the desk without pointing at your eyes. It is the lighting version of a monitor riser: it uses space you already spent on the display.</p>
     <a class="buy-btn" href="https://www.amazon.com/s?k=monitor+light+bar&tag=YOURTAG-20">Check price on Amazon</a>
   </div>
-
   <div class="pick">
     <span class="pick-num">Pick 03</span>
     <h3>The Bias Lighting LED Strip</h3>
@@ -100,7 +101,6 @@
     <p>A short strip on the back of a monitor that lights the wall behind it. Your eyes stop fighting a bright rectangle in a black room, and video-call backgrounds look less like a cave.</p>
     <a class="buy-btn" href="https://www.amazon.com/s?k=monitor+bias+lighting+led+strip&tag=YOURTAG-20">Check price on Amazon</a>
   </div>
-
   <div class="pick">
     <span class="pick-num">Pick 04</span>
     <h3>The Clip-On Reading Light</h3>
@@ -108,19 +108,17 @@
     <p>Clips to a shelf or headboard when the desk is already full. Useful for reading without turning on the whole room — and it packs smaller than a proper lamp if you move twice a year.</p>
     <a class="buy-btn" href="https://www.amazon.com/s?k=clip+on+reading+light+desk&tag=YOURTAG-20">Check price on Amazon</a>
   </div>
-
   <h2>Bottom line</h2>
   <p>If you only add one light, make it a dimmable warm desk lamp. The monitor bar and bias strip are excellent second steps once the main pool of light is already under your control.</p>
-
   <div class="pin-cta">
     <p>Save this for later</p>
     <a class="pin-link" href="#">Pin this post →</a>
   </div>
-
   <h2 style="margin-top:56px;">More from The Ruled Line</h2>
   <div class="related">
-    <a href="home-office-on-a-budget.html">Home Office Upgrades →</a>
+    <a href="home-office-on-a-budget.html">Home Office on a Budget →</a>
     <a href="desk-setup-ideas.html">Desk Setup Ideas →</a>
+    <a href="cable-management.html">Cable &amp; Cord Management →</a>
   </div>
 </div>
 <footer>The Ruled Line — desk, dorm &amp; study notes · Built with care, not templates</footer>

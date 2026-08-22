@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Study Room Organization That Doesn't Fall Apart by Week Three</title>
-<meta name="description" content="This board has your highest save rate — people bookmark it to actually act on later, so here's the follow-through post.">
+<meta name="description" content="Room-level bins, carts, and paper systems that survive being ignored for a week.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#f6f2ea;--ink:#22283a;--ink-soft:#565f78;--rose:#c17a72;--sage:#8a9a7e;--rule:#d9d0bf;}
+  :root{--paper:#f6f2ea;--ink:#22283a;--ink-soft:#565f78;--rose:#c17a72;--sage:#8a9a7e;--rule:#d9d0bf;--card:#fffefb;}
   *{box-sizing:border-box;}
   body{margin:0;background:var(--paper);background-image:linear-gradient(var(--rule) 1px, transparent 1px);background-size:100% 2.1em;background-position:0 7.4em;color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:680px;margin:0 auto;padding:0 24px 100px;}
@@ -21,28 +21,29 @@
   nav.crumbs a{color:var(--rose);text-decoration:none;}
   .eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin:30px 0 10px;}
   h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,5vw,44px);line-height:1.12;letter-spacing:-0.01em;margin:0 0 16px;}
-  .dek{font-size:18px;color:var(--ink-soft);max-width:56ch;margin:0 0 28px;}
+  .dek{font-size:18px;color:var(--ink-soft);max-width:56ch;margin:0 0 16px;}
+  .also-on{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin:0 0 22px;}
+  .also-on a{color:var(--rose);text-decoration:none;}
   .meta{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);display:flex;gap:18px;flex-wrap:wrap;padding-bottom:28px;margin-bottom:8px;border-bottom:1px solid var(--rule);}
   p{margin:0 0 20px;font-size:16.5px;}
   h2{font-family:'Fraunces',serif;font-weight:600;font-size:26px;margin:44px 0 6px;}
   .disclosure{background:#fff;border:1px solid var(--rule);border-radius:2px;padding:14px 18px;font-size:13.5px;color:var(--ink-soft);margin:8px 0 36px;}
-  .pick{background:#fffefb;border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
+  .pick{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
   .pick-num{font-family:'Space Mono',monospace;font-size:11px;color:var(--sage);letter-spacing:.08em;text-transform:uppercase;}
-  .category{font-family:'Fraunces',serif;font-weight:600;font-size:19px;color:var(--rose);margin:46px 0 4px;padding-bottom:8px;border-bottom:1px solid var(--sage);}
-  .category-note{font-size:14px;color:var(--ink-soft);margin:0 0 14px;font-style:italic;}
   .pick h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;}
   .pick .best-for{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin-bottom:12px;line-height:1.5;}
   .pick p{font-size:15.5px;margin-bottom:14px;}
-  .buy-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
-  .buy-btn:hover{background:var(--rose);transform:translateY(-1px);}
-  .buy-btn::after{content:"→";font-family:sans-serif;}
-  .teaser{display:block;background:#fffefb;border:1px dashed var(--rose);border-left:3px solid var(--rose);border-radius:2px;padding:22px 24px;margin:8px 0 12px;text-decoration:none;color:inherit;transition:transform .15s ease, background .15s ease;}
-  .teaser:hover{transform:translateY(-2px);background:#fff;}
+  .buy-btn,.guide-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
+  .buy-btn:hover,.guide-btn:hover{background:var(--rose);transform:translateY(-1px);}
+  .buy-btn::after,.guide-btn::after{content:"→";font-family:sans-serif;}
+  .guide-btn{background:var(--rose);}
+  .guide-btn:hover{background:var(--ink);}
+  .teaser{display:block;background:var(--card);border:1.5px dashed var(--rose);border-radius:2px;padding:22px 24px;margin:0 0 18px;text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease;}
+  .teaser:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(34,40,58,.08);}
   .teaser-label{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);}
   .teaser h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;color:var(--ink);}
-  .teaser p{font-size:15.5px;margin-bottom:12px;color:var(--ink-soft);}
-  .teaser-btn{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--rose);}
-  ul.plain{margin:0 0 20px;padding-left:0;list-style:none;}
+  .teaser p{font-size:15.5px;margin-bottom:16px;color:var(--ink-soft);}
+  ul.plain{margin:0 0 28px;padding-left:0;list-style:none;}
   ul.plain li{padding-left:26px;position:relative;margin-bottom:10px;font-size:15.5px;}
   ul.plain li::before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border:1.5px solid var(--sage);border-radius:2px;}
   .pin-cta{margin:52px 0 20px;padding:26px;background:var(--ink);color:var(--paper);border-radius:3px;text-align:center;}
@@ -53,8 +54,8 @@
   .related a:hover{color:var(--rose);}
   footer{max-width:680px;margin:60px auto 0;padding:24px;border-top:2px solid var(--ink);font-family:'Space Mono',monospace;font-size:11.5px;color:var(--ink-soft);text-align:center;}
   @media (prefers-reduced-motion: reduce){
-    .buy-btn,.teaser{transition:none;}
-    .buy-btn:hover,.teaser:hover{transform:none;}
+    .buy-btn,.guide-btn,.teaser{transition:none;}
+    .buy-btn:hover,.guide-btn:hover,.teaser:hover{transform:none;}
   }
 </style>
 </head>
@@ -67,13 +68,10 @@
 <div class="wrap">
   <p class="eyebrow">Study Room</p>
   <h1>Study Room Organization That Doesn't Fall Apart by Week Three</h1>
-  <p class="dek">This board has your highest save rate — people bookmark it to actually act on later, so here's the follow-through post.</p>
+  <p class="dek">This board has a high save rate — people bookmark it to actually act on later, so here's the follow-through post.</p>
   <div class="meta"><span>6 min read</span><span>Updated Aug 2026</span></div>
-
   <div class="disclosure"><strong>A quick note:</strong> Some links on this page are Amazon affiliate links. If you buy through them, this site earns a small commission at no extra cost to you.</div>
-
-  <p>Room-level storage is bins, carts, and doors — not the tray on the desk. Paper systems are what keep syllabi from becoming archaeology. Desk drawers and monitor risers live on the shared storage guide, linked below, so this page can stay about the rest of the room.</p>
-
+  <p>Room-level storage is bins, carts, and doors. Paper systems keep syllabi from becoming archaeology. Desk-surface trays live on a shared storage guide used by Home Office and Desk Setup as well. Open a card — the picks are not on this page.</p>
   <h2>What to actually look for</h2>
   <ul class="plain">
     <li>Systems that survive being ignored for a week</li>
@@ -81,78 +79,30 @@
     <li>Works in a shared or small room</li>
     <li>Doesn't need permanent installation</li>
   </ul>
-
-  <p class="category">Desk Storage</p>
-  <p class="category-note">The desktop layer — trays and risers, not room bins.</p>
   <a class="teaser" href="desk-storage-organization.html">
-    <span class="teaser-label">Shared guide · 4 picks</span>
-    <h3>Desk storage &amp; organization</h3>
-    <p>If the mess is on the work surface itself, start there. This guide is shared with Home Office and Desk Setup.</p>
-    <span class="teaser-btn">Open desk storage →</span>
+    <span class="teaser-label">Category · shared guide</span>
+    <h3>Desk Storage</h3>
+    <p>The desktop layer — trays and risers — shared with Home Office and Desk Setup. Not the same as room bins.</p>
+    <span class="guide-btn">See full guide</span>
   </a>
-
-  <p class="category">Storage Systems</p>
-  <p class="category-note">Where the bulk of textbooks and supplies actually live.</p>
-
-  <div class="pick">
-    <span class="pick-num">Pick 01</span>
-    <h3>The Stackable Storage Bins</h3>
-    <p class="best-for">Best for: textbooks and supplies that don't fit on a shelf</p>
-    <p>Modular bins that stack instead of sprawl — built for rooms where floor and shelf space are both limited. Label the short side so you can find last semester's notes without unstacking the whole tower.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=stackable+storage+bins+study&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
-  <div class="pick">
-    <span class="pick-num">Pick 02</span>
-    <h3>The Rolling Storage Cart</h3>
-    <p class="best-for">Best for: small rooms that need supplies to move out of the way</p>
-    <p>A slim cart that tucks under a desk during study time and rolls aside completely when it's not needed. Three-tier carts hold more than they look like they should if you keep heavy books on the bottom.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=rolling+storage+cart&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
-  <div class="pick">
-    <span class="pick-num">Pick 03</span>
-    <h3>The Over-the-Door Organizer</h3>
-    <p class="best-for">Best for: shared rooms where floor space is already spoken for</p>
-    <p>Hangs on a closet or bedroom door and swallows chargers, tape, and the calculator you otherwise lose. No holes, and it leaves with you at the end of the lease.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=over+the+door+organizer+pockets&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
-  <p class="category">Paper &amp; Document Organization</p>
-  <p class="category-note">Keeping loose handouts and syllabi from disappearing.</p>
-
-  <div class="pick">
-    <span class="pick-num">Pick 04</span>
-    <h3>The Wall-Mounted File Organizer</h3>
-    <p class="best-for">Best for: loose papers, syllabi, and handouts that go missing</p>
-    <p>Command-strip mountable pockets that sort papers by class without a single hole in the wall. Vertical paper is the one system people keep using when bins and carts get abandoned.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=wall+mounted+file+organizer&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
-  <div class="pick">
-    <span class="pick-num">Pick 05</span>
-    <h3>The Expanding File Folder</h3>
-    <p class="best-for">Best for: a whole course's worth of handouts that still needs to travel</p>
-    <p>A closed accordion file beats a pile in a tote bag. One folder per semester is enough; color tabs help only if you will actually write on them the first week.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=expanding+file+folder+accordion&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
-  <div class="pick">
-    <span class="pick-num">Pick 06</span>
-    <h3>The Magazine File Holders</h3>
-    <p class="best-for">Best for: open shelves that currently hold slumping stacks of packets</p>
-    <p>Upright cardboard or plastic files keep notebooks from becoming a leaning tower. They look like library furniture, which is a compliment in a study room.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=magazine+file+holders+desk&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
+  <a class="teaser" href="study-room-storage.html">
+    <span class="teaser-label">Category · 3 picks</span>
+    <h3>Storage Systems</h3>
+    <p>Where the bulk of textbooks and supplies actually live — bins, a rolling cart, and an over-the-door organizer.</p>
+    <span class="guide-btn">See full guide</span>
+  </a>
+  <a class="teaser" href="paper-document-organization.html">
+    <span class="teaser-label">Category · 3 picks</span>
+    <h3>Paper &amp; Document Organization</h3>
+    <p>Keeping loose handouts and syllabi from disappearing — wall pockets, accordion files, magazine holders.</p>
+    <span class="guide-btn">See full guide</span>
+  </a>
   <h2>Bottom line</h2>
-  <p>The wall organizer is the one people actually keep using — bins and carts get abandoned first when a room gets busy. Use the cart if you need the supplies to physically leave the footprint of the desk.</p>
-
+  <p>The paper guide is the one people actually keep using — bins and carts get abandoned first when a room gets busy. Use the cart if you need supplies to physically leave the footprint of the desk.</p>
   <div class="pin-cta">
     <p>Save this for later</p>
     <a class="pin-link" href="#">Pin this post →</a>
   </div>
-
   <h2 style="margin-top:56px;">More from The Ruled Line</h2>
   <div class="related">
     <a href="home-office-on-a-budget.html">Home Office Upgrades →</a>

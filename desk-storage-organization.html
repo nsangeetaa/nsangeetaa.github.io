@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Desk Storage &amp; Organization — The Ruled Line</title>
-<meta name="description" content="Risers, trays, and shallow drawers that reclaim desk surface without buying new furniture.">
+<meta name="description" content="Risers, trays, and shallow drawers that reclaim desk surface.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#f6f2ea;--ink:#22283a;--ink-soft:#565f78;--rose:#c17a72;--sage:#8a9a7e;--rule:#d9d0bf;}
+  :root{--paper:#f6f2ea;--ink:#22283a;--ink-soft:#565f78;--rose:#c17a72;--sage:#8a9a7e;--rule:#d9d0bf;--card:#fffefb;}
   *{box-sizing:border-box;}
   body{margin:0;background:var(--paper);background-image:linear-gradient(var(--rule) 1px, transparent 1px);background-size:100% 2.1em;background-position:0 7.4em;color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:680px;margin:0 auto;padding:0 24px 100px;}
@@ -28,15 +28,22 @@
   p{margin:0 0 20px;font-size:16.5px;}
   h2{font-family:'Fraunces',serif;font-weight:600;font-size:26px;margin:44px 0 6px;}
   .disclosure{background:#fff;border:1px solid var(--rule);border-radius:2px;padding:14px 18px;font-size:13.5px;color:var(--ink-soft);margin:8px 0 36px;}
-  .pick{background:#fffefb;border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
+  .pick{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
   .pick-num{font-family:'Space Mono',monospace;font-size:11px;color:var(--sage);letter-spacing:.08em;text-transform:uppercase;}
   .pick h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;}
   .pick .best-for{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin-bottom:12px;line-height:1.5;}
   .pick p{font-size:15.5px;margin-bottom:14px;}
-  .buy-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
-  .buy-btn:hover{background:var(--rose);transform:translateY(-1px);}
-  .buy-btn::after{content:"→";font-family:sans-serif;}
-  ul.plain{margin:0 0 20px;padding-left:0;list-style:none;}
+  .buy-btn,.guide-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
+  .buy-btn:hover,.guide-btn:hover{background:var(--rose);transform:translateY(-1px);}
+  .buy-btn::after,.guide-btn::after{content:"→";font-family:sans-serif;}
+  .guide-btn{background:var(--rose);}
+  .guide-btn:hover{background:var(--ink);}
+  .teaser{display:block;background:var(--card);border:1.5px dashed var(--rose);border-radius:2px;padding:22px 24px;margin:0 0 18px;text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease;}
+  .teaser:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(34,40,58,.08);}
+  .teaser-label{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);}
+  .teaser h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;color:var(--ink);}
+  .teaser p{font-size:15.5px;margin-bottom:16px;color:var(--ink-soft);}
+  ul.plain{margin:0 0 28px;padding-left:0;list-style:none;}
   ul.plain li{padding-left:26px;position:relative;margin-bottom:10px;font-size:15.5px;}
   ul.plain li::before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border:1.5px solid var(--sage);border-radius:2px;}
   .pin-cta{margin:52px 0 20px;padding:26px;background:var(--ink);color:var(--paper);border-radius:3px;text-align:center;}
@@ -47,8 +54,8 @@
   .related a:hover{color:var(--rose);}
   footer{max-width:680px;margin:60px auto 0;padding:24px;border-top:2px solid var(--ink);font-family:'Space Mono',monospace;font-size:11.5px;color:var(--ink-soft);text-align:center;}
   @media (prefers-reduced-motion: reduce){
-    .buy-btn{transition:none;}
-    .buy-btn:hover{transform:none;}
+    .buy-btn,.guide-btn,.teaser{transition:none;}
+    .buy-btn:hover,.guide-btn:hover,.teaser:hover{transform:none;}
   }
 </style>
 </head>
@@ -63,12 +70,9 @@
   <h1>Desk Storage &amp; Organization</h1>
   <p class="dek">Reclaiming surface space without buying new furniture — the desk-level trays, risers, and drawers that give pens and notebooks a fixed home.</p>
   <p class="also-on">Also featured on: <a href="home-office-on-a-budget.html">Home Office on a Budget</a> · <a href="desk-setup-ideas.html">Desk Setup Ideas</a> · <a href="study-room-organization.html">Study Room Organization</a></p>
-  <div class="meta"><span>5 min read</span><span>Updated Aug 2026</span><span>Storage</span></div>
-
+  <div class="meta"><span>5 min read</span><span>Updated Aug 2026</span></div>
   <div class="disclosure"><strong>A quick note:</strong> Some links on this page are Amazon affiliate links. If you buy through them, this site earns a small commission at no extra cost to you.</div>
-
-  <p>This page is for the stuff that lives on the desk itself. Room-level bins and carts belong in the study-room post; dorm baskets belong in the dorm post. Here it is risers, trays, and one shallow drawer so the working surface stays clear.</p>
-
+  <p>This page is for the stuff that lives on the desk itself. Room-level bins and carts belong in the study-room storage guide; dorm baskets belong in the dorm storage guide. Here it is risers, trays, and one shallow drawer so the working surface stays clear.</p>
   <h2>What to actually look for</h2>
   <ul class="plain">
     <li>Uses vertical space (under a monitor, above the surface) instead of eating more desktop</li>
@@ -76,7 +80,6 @@
     <li>Doesn't wobble under a monitor or a stack of textbooks</li>
     <li>Fits a small desk, not only a 60-inch executive setup</li>
   </ul>
-
   <div class="pick">
     <span class="pick-num">Pick 01</span>
     <h3>The Monitor Riser With Storage</h3>
@@ -84,7 +87,6 @@
     <p>Lifts your screen toward eye level and turns the dead space underneath into a home for pens, notebooks, and the stuff that otherwise piles up. One piece that does posture and storage at the same time is the rare upgrade that earns its footprint.</p>
     <a class="buy-btn" href="https://www.amazon.com/s?k=monitor+riser+storage&tag=YOURTAG-20">Check price on Amazon</a>
   </div>
-
   <div class="pick">
     <span class="pick-num">Pick 02</span>
     <h3>The Mesh Desk Organizer</h3>
@@ -92,7 +94,6 @@
     <p>A single tray system that gives papers, pens, and sticky notes one home instead of three random piles. Mesh looks a little office-catalog, which is the point — you can see what you have, so it stays in use.</p>
     <a class="buy-btn" href="https://www.amazon.com/s?k=mesh+desk+organizer&tag=YOURTAG-20">Check price on Amazon</a>
   </div>
-
   <div class="pick">
     <span class="pick-num">Pick 03</span>
     <h3>The Shallow Desk Drawer Organizer</h3>
@@ -100,7 +101,6 @@
     <p>A grid insert that stops clips, USBs, and sticky-note pads from becoming one tray of noise. If you already have a drawer, this is cheaper and more useful than another thing sitting on top of the desk.</p>
     <a class="buy-btn" href="https://www.amazon.com/s?k=desk+drawer+organizer+tray&tag=YOURTAG-20">Check price on Amazon</a>
   </div>
-
   <div class="pick">
     <span class="pick-num">Pick 04</span>
     <h3>The Desktop File Sorter</h3>
@@ -108,19 +108,17 @@
     <p>Vertical slots keep this week's paper visible without covering the keyboard. Pair it with the room-level file system if you have a whole study corner; this one is for the desk you sit at tonight.</p>
     <a class="buy-btn" href="https://www.amazon.com/s?k=desktop+file+sorter+vertical&tag=YOURTAG-20">Check price on Amazon</a>
   </div>
-
   <h2>Bottom line</h2>
   <p>Start with the monitor riser if the desk is small. It buys you surface, a slightly better neck angle, and a reason to put the notebook somewhere besides “next to the laptop.”</p>
-
   <div class="pin-cta">
     <p>Save this for later</p>
     <a class="pin-link" href="#">Pin this post →</a>
   </div>
-
   <h2 style="margin-top:56px;">More from The Ruled Line</h2>
   <div class="related">
-    <a href="study-room-organization.html">Study Room Organization →</a>
+    <a href="home-office-on-a-budget.html">Home Office on a Budget →</a>
     <a href="desk-setup-ideas.html">Desk Setup Ideas →</a>
+    <a href="study-room-storage.html">Study Room Storage →</a>
   </div>
 </div>
 <footer>The Ruled Line — desk, dorm &amp; study notes · Built with care, not templates</footer>

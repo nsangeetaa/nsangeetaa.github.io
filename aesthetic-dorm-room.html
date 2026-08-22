@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aesthetic Dorm Room Finds That Still Hold Your Actual Stuff</title>
-<meta name="description" content="Pretty and functional aren't opposites — these are the dorm pieces that look good in photos and still survive a real semester.">
+<meta name="description" content="Pretty and functional aren't opposites — dorm pieces that survive a real semester.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#f6f2ea;--ink:#22283a;--ink-soft:#565f78;--rose:#c17a72;--sage:#8a9a7e;--rule:#d9d0bf;}
+  :root{--paper:#f6f2ea;--ink:#22283a;--ink-soft:#565f78;--rose:#c17a72;--sage:#8a9a7e;--rule:#d9d0bf;--card:#fffefb;}
   *{box-sizing:border-box;}
   body{margin:0;background:var(--paper);background-image:linear-gradient(var(--rule) 1px, transparent 1px);background-size:100% 2.1em;background-position:0 7.4em;color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:680px;margin:0 auto;padding:0 24px 100px;}
@@ -21,22 +21,29 @@
   nav.crumbs a{color:var(--rose);text-decoration:none;}
   .eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin:30px 0 10px;}
   h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,5vw,44px);line-height:1.12;letter-spacing:-0.01em;margin:0 0 16px;}
-  .dek{font-size:18px;color:var(--ink-soft);max-width:56ch;margin:0 0 28px;}
+  .dek{font-size:18px;color:var(--ink-soft);max-width:56ch;margin:0 0 16px;}
+  .also-on{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin:0 0 22px;}
+  .also-on a{color:var(--rose);text-decoration:none;}
   .meta{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);display:flex;gap:18px;flex-wrap:wrap;padding-bottom:28px;margin-bottom:8px;border-bottom:1px solid var(--rule);}
   p{margin:0 0 20px;font-size:16.5px;}
   h2{font-family:'Fraunces',serif;font-weight:600;font-size:26px;margin:44px 0 6px;}
   .disclosure{background:#fff;border:1px solid var(--rule);border-radius:2px;padding:14px 18px;font-size:13.5px;color:var(--ink-soft);margin:8px 0 36px;}
-  .pick{background:#fffefb;border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
+  .pick{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
   .pick-num{font-family:'Space Mono',monospace;font-size:11px;color:var(--sage);letter-spacing:.08em;text-transform:uppercase;}
-  .category{font-family:'Fraunces',serif;font-weight:600;font-size:19px;color:var(--rose);margin:46px 0 4px;padding-bottom:8px;border-bottom:1px solid var(--sage);}
-  .category-note{font-size:14px;color:var(--ink-soft);margin:0 0 4px;font-style:italic;}
   .pick h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;}
   .pick .best-for{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin-bottom:12px;line-height:1.5;}
   .pick p{font-size:15.5px;margin-bottom:14px;}
-  .buy-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
-  .buy-btn:hover{background:var(--rose);transform:translateY(-1px);}
-  .buy-btn::after{content:"→";font-family:sans-serif;}
-  ul.plain{margin:0 0 20px;padding-left:0;list-style:none;}
+  .buy-btn,.guide-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
+  .buy-btn:hover,.guide-btn:hover{background:var(--rose);transform:translateY(-1px);}
+  .buy-btn::after,.guide-btn::after{content:"→";font-family:sans-serif;}
+  .guide-btn{background:var(--rose);}
+  .guide-btn:hover{background:var(--ink);}
+  .teaser{display:block;background:var(--card);border:1.5px dashed var(--rose);border-radius:2px;padding:22px 24px;margin:0 0 18px;text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease;}
+  .teaser:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(34,40,58,.08);}
+  .teaser-label{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);}
+  .teaser h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;color:var(--ink);}
+  .teaser p{font-size:15.5px;margin-bottom:16px;color:var(--ink-soft);}
+  ul.plain{margin:0 0 28px;padding-left:0;list-style:none;}
   ul.plain li{padding-left:26px;position:relative;margin-bottom:10px;font-size:15.5px;}
   ul.plain li::before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border:1.5px solid var(--sage);border-radius:2px;}
   .pin-cta{margin:52px 0 20px;padding:26px;background:var(--ink);color:var(--paper);border-radius:3px;text-align:center;}
@@ -47,8 +54,8 @@
   .related a:hover{color:var(--rose);}
   footer{max-width:680px;margin:60px auto 0;padding:24px;border-top:2px solid var(--ink);font-family:'Space Mono',monospace;font-size:11.5px;color:var(--ink-soft);text-align:center;}
   @media (prefers-reduced-motion: reduce){
-    .buy-btn{transition:none;}
-    .buy-btn:hover{transform:none;}
+    .buy-btn,.guide-btn,.teaser{transition:none;}
+    .buy-btn:hover,.guide-btn:hover,.teaser:hover{transform:none;}
   }
 </style>
 </head>
@@ -63,11 +70,8 @@
   <h1>Aesthetic Dorm Room Finds That Still Hold Your Actual Stuff</h1>
   <p class="dek">Pretty and functional aren't opposites — these are the dorm pieces that look good in photos and still survive a real semester.</p>
   <div class="meta"><span>6 min read</span><span>Updated Aug 2026</span></div>
-
   <div class="disclosure"><strong>A quick note:</strong> Some links on this page are Amazon affiliate links. If you buy through them, this site earns a small commission at no extra cost to you.</div>
-
-  <p>Office bins and mesh trays belong on the study-room and desk-storage pages. This post is the dorm version: soft baskets, under-bed bags, and wall pieces that come off clean at move-out. If it only works empty in a photo, it is not on this list.</p>
-
+  <p>Office bins and mesh trays belong on the study-room and desk-storage pages. This post splits into styled storage and wall pieces that come off clean at move-out. If it only works empty in a photo, it is not in those guides.</p>
   <h2>What to actually look for</h2>
   <ul class="plain">
     <li>Removable without damaging dorm walls</li>
@@ -75,69 +79,24 @@
     <li>Fits standard dorm furniture dimensions</li>
     <li>Doesn't require tools to set up</li>
   </ul>
-
-  <p class="category">Storage That Still Looks Styled</p>
-  <p class="category-note">Hiding clutter without it looking like storage.</p>
-
-  <div class="pick">
-    <span class="pick-num">Pick 01</span>
-    <h3>The Woven Storage Baskets</h3>
-    <p class="best-for">Best for: open shelving that needs to look styled, not stuffed</p>
-    <p>Soft-structure baskets that hide clutter on open shelves while still looking intentional, not like overflow storage. Two matching ones beat five mismatched cubes that announce “I have too much stuff.”</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=woven+storage+baskets+dorm&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
-  <div class="pick">
-    <span class="pick-num">Pick 02</span>
-    <h3>The Under-Bed Storage Bags</h3>
-    <p class="best-for">Best for: dorm rooms with zero closet space to spare</p>
-    <p>Flat storage bags built for the one piece of real estate every dorm room has in excess: under the bed. Off-season clothes and extra linens disappear without a plastic tub aesthetic on the floor.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=under+bed+storage+bags&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
-  <div class="pick">
-    <span class="pick-num">Pick 03</span>
-    <h3>The Fabric Cube Bins</h3>
-    <p class="best-for">Best for: cube shelves and closet cubbies that came with the room</p>
-    <p>Collapsible fabric cubes in one colorway turn a metal cube unit into furniture instead of locker storage. They fold flat at move-out, which plastic bins refuse to do.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=fabric+cube+storage+bins+dorm&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
-  <p class="category">Wall &amp; Decor</p>
-  <p class="category-note">Personalizing a rented wall without losing the deposit.</p>
-
-  <div class="pick">
-    <span class="pick-num">Pick 04</span>
-    <h3>The Command Strip Wall Organizer</h3>
-    <p class="best-for">Best for: hanging a mail pocket or small caddy without wall damage</p>
-    <p>Removable adhesive strips rated for dorm walls — holds real weight and comes off clean at move-out. Use them for a pocket organizer, not for a full bookshelf; the rating on the pack is not a suggestion.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=command+strip+organizer+dorm&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
-  <div class="pick">
-    <span class="pick-num">Pick 05</span>
-    <h3>The Warm String Lights</h3>
-    <p class="best-for">Best for: overhead fluorescents you are not allowed to replace</p>
-    <p>A short strand of warm LEDs along a headboard or window frame is still the fastest way to make a cinderblock wall feel like a room. USB-powered beats hunting for an open outlet behind the bed.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=warm+led+string+lights+usb+dorm&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
-  <div class="pick">
-    <span class="pick-num">Pick 06</span>
-    <h3>The Photo Clip Hanging Set</h3>
-    <p class="best-for">Best for: swapping prints and polaroids without new holes every month</p>
-    <p>A wire and clips (or a small hanging display) lets the wall change with the semester. It photographs well because it is actually in use, not because it is a fake gallery wall of empty frames.</p>
-    <a class="buy-btn" href="https://www.amazon.com/s?k=photo+clip+hanging+display+dorm&tag=YOURTAG-20">Check price on Amazon</a>
-  </div>
-
+  <a class="teaser" href="dorm-storage.html">
+    <span class="teaser-label">Category · 3 picks</span>
+    <h3>Storage That Still Looks Styled</h3>
+    <p>Hiding clutter without it looking like storage — baskets, under-bed bags, and fabric cubes.</p>
+    <span class="guide-btn">See full guide</span>
+  </a>
+  <a class="teaser" href="dorm-wall-decor.html">
+    <span class="teaser-label">Category · 3 picks</span>
+    <h3>Wall &amp; Decor</h3>
+    <p>Personalizing a rented wall without losing the deposit — command strips, string lights, photo clips.</p>
+    <span class="guide-btn">See full guide</span>
+  </a>
   <h2>Bottom line</h2>
-  <p>Prioritize under-bed storage first — it's the highest-capacity, lowest-visibility option for a room where every surface is already spoken for. Then one matching set of baskets so the open shelves stop shouting.</p>
-
+  <p>Open the storage guide first and prioritize under-bed bags — highest capacity, lowest visibility. Then one matching set of baskets so open shelves stop shouting.</p>
   <div class="pin-cta">
     <p>Save this for later</p>
     <a class="pin-link" href="#">Pin this post →</a>
   </div>
-
   <h2 style="margin-top:56px;">More from The Ruled Line</h2>
   <div class="related">
     <a href="study-room-organization.html">Study Room Organization →</a>
