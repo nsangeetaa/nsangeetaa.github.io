@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Planners — The Ruled Line</title>
+<meta name="description" content="Weekly, undated, and exam-season planners that survive past week three.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#f6f2ea;--ink:#22283a;--ink-soft:#565f78;--rose:#c17a72;--sage:#8a9a7e;--rule:#d9d0bf;--card:#fffefb;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);background-image:linear-gradient(var(--rule) 1px, transparent 1px);background-size:100% 2.1em;background-position:0 7.4em;color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px 100px;}
+  header.masthead{max-width:680px;margin:0 auto;padding:40px 24px 18px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--ink);}
+  .brand{font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;}
+  .brand b{color:var(--ink);}
+  .tag{font-family:'Space Mono',monospace;font-size:11px;color:var(--rose);letter-spacing:.06em;}
+  nav.crumbs{max-width:680px;margin:14px auto 0;padding:0 24px;font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);}
+  nav.crumbs a{color:var(--rose);text-decoration:none;}
+  .eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin:30px 0 10px;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,5vw,44px);line-height:1.12;letter-spacing:-0.01em;margin:0 0 16px;}
+  .dek{font-size:18px;color:var(--ink-soft);max-width:56ch;margin:0 0 16px;}
+  .also-on{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin:0 0 22px;}
+  .also-on a{color:var(--rose);text-decoration:none;}
+  .meta{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);display:flex;gap:18px;flex-wrap:wrap;padding-bottom:28px;margin-bottom:8px;border-bottom:1px solid var(--rule);}
+  p{margin:0 0 20px;font-size:16.5px;}
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:26px;margin:44px 0 6px;}
+  .disclosure{background:#fff;border:1px solid var(--rule);border-radius:2px;padding:14px 18px;font-size:13.5px;color:var(--ink-soft);margin:8px 0 36px;}
+  .pick{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
+  .pick-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;border:1px solid var(--rule);margin-bottom:16px;background:var(--paper);}
+  .carousel-wrap{margin:0 0 16px;}
+  .carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;border-radius:2px;border:1px solid var(--rule);scrollbar-width:none;}
+  .carousel::-webkit-scrollbar{display:none;}
+  .carousel a{flex:0 0 100%;scroll-snap-align:start;display:block;line-height:0;}
+  .carousel img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--paper);}
+  .carousel-dots{display:flex;justify-content:center;gap:6px;margin-top:10px;}
+  .carousel-dots span{width:6px;height:6px;border-radius:50%;background:var(--rule);transition:background .15s ease;}
+  .carousel-dots span.active{background:var(--rose);}
+  .pick-num{font-family:'Space Mono',monospace;font-size:11px;color:var(--sage);letter-spacing:.08em;text-transform:uppercase;}
+  .pick h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;}
+  .pick .best-for{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin-bottom:12px;line-height:1.5;}
+  .pick p{font-size:15.5px;margin-bottom:14px;}
+  .buy-btn,.guide-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
+  .buy-btn:hover,.guide-btn:hover{background:var(--rose);transform:translateY(-1px);}
+  .buy-btn::after,.guide-btn::after{content:"→";font-family:sans-serif;}
+  .guide-btn{background:var(--rose);}
+  .guide-btn:hover{background:var(--ink);}
+  ul.plain{margin:0 0 28px;padding-left:0;list-style:none;}
+  ul.plain li{padding-left:26px;position:relative;margin-bottom:10px;font-size:15.5px;}
+  ul.plain li::before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border:1.5px solid var(--sage);border-radius:2px;}
+  .pin-cta{margin:52px 0 20px;padding:26px;background:var(--ink);color:var(--paper);border-radius:3px;text-align:center;}
+  .pin-cta p{color:var(--paper);font-size:15px;margin-bottom:14px;opacity:.85;}
+  .pin-cta a{font-family:'Space Mono',monospace;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);background:var(--paper);padding:11px 20px;border-radius:2px;text-decoration:none;display:inline-block;}
+  .related{margin-top:16px;}
+  .related a{display:block;font-size:14.5px;color:var(--ink);padding:10px 0;border-bottom:1px solid var(--rule);text-decoration:none;}
+  .related a:hover{color:var(--rose);}
+  footer{max-width:680px;margin:60px auto 0;padding:24px;border-top:2px solid var(--ink);font-family:'Space Mono',monospace;font-size:11.5px;color:var(--ink-soft);text-align:center;}
+  @media (prefers-reduced-motion: reduce){
+    .buy-btn,.guide-btn{transition:none;}
+    .buy-btn:hover,.guide-btn:hover{transform:none;}
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <a class="brand" href="index.html"><b>The Ruled Line</b> — desk, dorm &amp; study notes</a>
+  <span class="tag">est. 2026</span>
+</header>
+<nav class="crumbs"><a href="index.html">← All posts</a></nav>
+<div class="wrap">
+  <p class="eyebrow">Study supplies</p>
+  <h1>Study Planners That Actually Get Used Past Week One</h1>
+  <p class="dek">Most planners fail for the same reason: they're built for the person you wish you were, not the one studying at 11pm with three tabs open. These survived a real semester.</p>
+  <p class="also-on">Also featured on: <a href="amazon-study-supplies-finds.html">Amazon Study Supplies Finds</a></p>
+  <div class="meta"><span>6 min read</span><span>Updated Aug 2026</span></div>
+  <div class="disclosure"><strong>A quick note:</strong> Some links on this page are Amazon affiliate links. If you buy through them, this site earns a small commission at no extra cost to you.</div>
+  <p>A planner only earns its shelf space if it's still open by week four. These three cover the three most common ways people actually study: by the week, without dates at all, and in a hard sprint before exams.</p>
+  <h2>What to actually look for</h2>
+  <ul class="plain">
+    <li>Weekly view you can see without flipping pages mid-panic</li>
+    <li>Space for deadlines and daily tasks — most planners only do one</li>
+    <li>Undated pages, so a skipped week doesn't waste the whole planner</li>
+    <li>Paper that doesn't ghost through when you write in pen</li>
+  </ul>
+  <div class="pick">
+    <span class="pick-num">Pick 01</span>
+    <div class="carousel-wrap">
+      <div class="carousel" data-carousel>
+        <a href="https://link.amazon/B04JsqHbJ" target="_blank" rel="noopener sponsored">
+          <img src="images/waterproof-weekly-planner-1.png" alt="Weekly planner with clear waterproof front cover protecting the pages from spills and dust">
+        </a>
+        <a href="https://link.amazon/B04JsqHbJ" target="_blank" rel="noopener sponsored">
+          <img src="images/waterproof-weekly-planner-2.png" alt="Weekly planner page filled in by hand, showing top priority, low priority, and habit tracker sections in use">
+        </a>
+        <a href="https://link.amazon/B04JsqHbJ" target="_blank" rel="noopener sponsored">
+          <img src="images/waterproof-weekly-planner-3.png" alt="Blank weekly planner layout showing Monday through Sunday columns, a notes box, and a habit tracker grid">
+        </a>
+      </div>
+      <div class="carousel-dots"></div>
+    </div>
+    <h3>The Waterproof Weekly Planner</h3>
+    <p class="best-for">Best for: anyone who studies with coffee, water bottles, or snacks within spilling distance</p>
+    <p>An undated weekly spread with a clear waterproof cover, color-coded priority sections, and a built-in habit tracker — so a spilled drink doesn't take out a week of planning with it.</p>
+    <a class="buy-btn" href="https://link.amazon/B04JsqHbJ" target="_blank" rel="noopener sponsored">Check price on Amazon</a>
+  </div>
+  <div class="pick">
+    <span class="pick-num">Pick 02</span>
+    <img class="pick-img" src="images/weekly-overhaul-planner.jpg" alt="Open weekly planner spread with a due-this-week column and daily task boxes">
+    <h3>The Weekly Overhaul Planner</h3>
+    <p class="best-for">Best for: students juggling 5+ classes with heavy weekly reading loads</p>
+    <p>The two-page weekly spread is the whole reason this makes the list — a full week visible at once, with a side column just for "due this week" so deadlines never hide inside a daily box.</p>
+    <a class="buy-btn" href="https://www.amazon.com/s?k=weekly+study+planner&tag=YOURTAG-20">Check price on Amazon</a>
+  </div>
+  <div class="pick">
+    <span class="pick-num">Pick 03</span>
+    <img class="pick-img" src="images/undated-daily-planner.jpg" alt="Undated daily planner page with three priorities and a small habit tracker strip">
+    <h3>The Undated Daily Planner</h3>
+    <p class="best-for">Best for: anyone who's quit a dated planner mid-March before</p>
+    <p>No dates printed means no guilt spiral after a missed week — you just pick back up. The daily pages are simple: three priorities, a task list, and a small habit tracker strip.</p>
+    <a class="buy-btn" href="https://www.amazon.com/s?k=undated+daily+planner&tag=YOURTAG-20">Check price on Amazon</a>
+  </div>
+  <div class="pick">
+    <span class="pick-num">Pick 04</span>
+    <img class="pick-img" src="images/exam-season-planner.jpg" alt="Exam season planner open to a revision countdown page with subject tracking columns">
+    <h3>The Exam Season Planner</h3>
+    <p class="best-for">Best for: finals season and structured revision blocks</p>
+    <p>Built around a countdown format with dedicated revision-tracking pages per subject — less useful in a normal week, but genuinely the best option in the two weeks before finals.</p>
+    <a class="buy-btn" href="https://www.amazon.com/s?k=exam+revision+planner&tag=YOURTAG-20">Check price on Amazon</a>
+  </div>
+  <h2>Bottom line</h2>
+  <p>If you only buy one, start with the Weekly Overhaul Planner — it's the most forgiving format for a first-time planner user and covers the widest range of course loads without extra setup.</p>
+  <div class="pin-cta">
+    <p>Save this for later</p>
+    <a class="pin-link" href="#">Pin this post →</a>
+  </div>
+  <h2 style="margin-top:56px;">More from The Ruled Line</h2>
+  <div class="related">
+    <a href="amazon-study-supplies-finds.html">Amazon Study Supplies Finds →</a>
+    <a href="writing-marking-tools.html">Writing &amp; Marking Tools →</a>
+  </div>
+</div>
+<footer>The Ruled Line — desk, dorm &amp; study notes · Built with care, not templates</footer>
+<script>
+  (function () {
+    var a = document.querySelector('.pin-link');
+    if (!a) return;
+    a.href = 'https://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(location.href) + '&description=' + encodeURIComponent(document.title);
+  })();
+  (function () {
+    document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+      var slides = carousel.querySelectorAll('a');
+      var dotsWrap = carousel.parentElement.querySelector('.carousel-dots');
+      if (!dotsWrap || slides.length < 2) return;
+      slides.forEach(function (_, i) {
+        var dot = document.createElement('span');
+        if (i === 0) dot.className = 'active';
+        dotsWrap.appendChild(dot);
+      });
+      var dots = dotsWrap.querySelectorAll('span');
+      carousel.addEventListener('scroll', function () {
+        var index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === index); });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
