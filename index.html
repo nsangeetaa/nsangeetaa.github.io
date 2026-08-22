@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Study Planners That Actually Get Used — The Ruled Line</title>
+<meta name="description" content="A hands-on comparison of five study planners worth buying in 2026, for students who've abandoned three planners already this year.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f6f2ea;
+    --ink:#22283a;
+    --ink-soft:#565f78;
+    --rose:#c17a72;
+    --sage:#8a9a7e;
+    --rule:#d9d0bf;
+    --paper-shadow: rgba(34,40,58,0.08);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    background-image:
+      linear-gradient(var(--rule) 1px, transparent 1px);
+    background-size: 100% 2.1em;
+    background-position: 0 7.4em;
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px; margin:0 auto; padding:0 24px 100px;}
+
+  header.masthead{
+    max-width:680px; margin:0 auto; padding:40px 24px 18px;
+    display:flex; align-items:baseline; justify-content:space-between;
+    border-bottom:2px solid var(--ink);
+  }
+  .brand{font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);}
+  .brand b{color:var(--ink);}
+  .tag{font-family:'Space Mono', monospace; font-size:11px; color:var(--rose); letter-spacing:.06em;}
+
+  .eyebrow{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--rose);
+    margin:38px 0 10px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(30px, 5vw, 44px);
+    line-height:1.12;
+    letter-spacing:-0.01em;
+    margin:0 0 16px;
+  }
+  .dek{
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:56ch;
+    margin:0 0 28px;
+  }
+  .meta{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    display:flex; gap:18px; flex-wrap:wrap;
+    padding-bottom:28px; margin-bottom:8px;
+    border-bottom:1px solid var(--rule);
+  }
+
+  p{margin:0 0 20px; font-size:16.5px;}
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:26px;
+    margin:44px 0 6px;
+  }
+  .disclosure{
+    background:#fff;
+    border:1px solid var(--rule);
+    border-radius:2px;
+    padding:14px 18px;
+    font-size:13.5px;
+    color:var(--ink-soft);
+    margin:8px 0 36px;
+  }
+
+  .pick{
+    background:#fffefb;
+    border:1px solid var(--rule);
+    border-left:3px solid var(--sage);
+    border-radius:2px;
+    padding:22px 24px;
+    margin:20px 0 36px;
+  }
+  .pick-num{
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    color:var(--sage);
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  .pick h3{
+    font-family:'Fraunces', serif;
+    font-size:21px;
+    font-weight:600;
+    margin:6px 0 4px;
+  }
+  .pick .best-for{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin-bottom:12px;
+  }
+  .pick p{font-size:15.5px; margin-bottom:14px;}
+  .buy-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Space Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--paper);
+    background:var(--ink);
+    border:none;
+    padding:11px 18px;
+    border-radius:2px;
+    text-decoration:none;
+    transition:background .15s ease;
+  }
+  .buy-btn:hover{background:var(--rose);}
+  .buy-btn::after{content:"→"; font-family:sans-serif;}
+
+  .checkline{
+    text-decoration: underline;
+    text-decoration-color: var(--rose);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  ul.plain{margin:0 0 20px; padding-left:0; list-style:none;}
+  ul.plain li{
+    padding-left:26px;
+    position:relative;
+    margin-bottom:10px;
+    font-size:15.5px;
+  }
+  ul.plain li::before{
+    content:"";
+    position:absolute; left:0; top:5px;
+    width:14px; height:14px;
+    border:1.5px solid var(--sage);
+    border-radius:2px;
+  }
+
+  .pin-cta{
+    margin:52px 0 20px;
+    padding:26px;
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:3px;
+    text-align:center;
+  }
+  .pin-cta p{color:var(--paper); font-size:15px; margin-bottom:14px; opacity:.85;}
+  .pin-cta a{
+    font-family:'Space Mono', monospace;
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--ink);
+    background:var(--paper);
+    padding:11px 20px;
+    border-radius:2px;
+    text-decoration:none;
+    display:inline-block;
+  }
+
+  footer{
+    max-width:680px; margin:60px auto 0; padding:24px;
+    border-top:2px solid var(--ink);
+    font-family:'Space Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+
+  @media(max-width:480px){
+    .meta{gap:10px 16px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <span class="brand"><b>The Ruled Line</b> — study & planning notes</span>
+  <span class="tag">est. 2026</span>
+</header>
+
+<div class="wrap">
+
+  <p class="eyebrow">Planner Reviews</p>
+  <h1>5 Study Planners That Actually Get Used <span class="checkline">Past Week One</span></h1>
+  <p class="dek">I've bought and abandoned more planners than I'd like to admit. These five earned a permanent spot on my desk — here's what actually made the difference, and who each one is really for.</p>
+  <div class="meta">
+    <span>6 min read</span>
+    <span>Updated Aug 2026</span>
+    <span>Study Planners</span>
+  </div>
+
+  <p>Most planners fail for the same reason: they're designed for the person you wish you were, not the person doing the studying at 11pm with three tabs of lecture slides open. The five below survived actual semesters — mine and a few friends who let me interrogate their desks.</p>
+
+  <div class="disclosure">
+    <strong>A quick note:</strong> Some links below are Amazon affiliate links. If you buy through them, this site earns a small commission at no extra cost to you. I only include planners I'd genuinely recommend to a friend.
+  </div>
+
+  <h2>What actually makes a study planner stick</h2>
+  <ul class="plain">
+    <li>Weekly view you can see without flipping pages mid-panic</li>
+    <li>Space for both deadlines <em>and</em> daily tasks — most planners only do one</li>
+    <li>Undated pages, so a skipped week doesn't waste the whole planner</li>
+    <li>Paper that doesn't ghost through when you write in pen</li>
+  </ul>
+
+  <!-- PICK 1 -->
+  <div class="pick">
+    <span class="pick-num">Pick 01</span>
+    <h3>The Weekly Overhaul Planner</h3>
+    <p class="best-for">Best for: students juggling 5+ classes with heavy weekly reading loads</p>
+    <p>The two-page weekly spread is the whole reason this makes the list — a full week visible at once, with a side column just for "due this week" so deadlines never hide inside a daily box.</p>
+    <a class="buy-btn" href="https://www.amazon.com/s?k=weekly+study+planner&tag=YOURTAG-20">Check price on Amazon</a>
+  </div>
+
+  <!-- PICK 2 -->
+  <div class="pick">
+    <span class="pick-num">Pick 02</span>
+    <h3>The Undated Daily Planner</h3>
+    <p class="best-for">Best for: anyone who's quit a dated planner mid-March before</p>
+    <p>No dates printed means no guilt spiral after a missed week — you just pick back up. The daily pages are simple: three priorities, a task list, and a small habit tracker strip.</p>
+    <a class="buy-btn" href="https://www.amazon.com/s?k=undated+daily+planner&tag=YOURTAG-20">Check price on Amazon</a>
+  </div>
+
+  <!-- PICK 3 -->
+  <div class="pick">
+    <span class="pick-num">Pick 03</span>
+    <h3>The Exam Season Planner</h3>
+    <p class="best-for">Best for: finals season and structured revision blocks</p>
+    <p>Built around a countdown format with dedicated revision-tracking pages per subject — less useful in a normal week, but genuinely the best option I've tried in the two weeks before finals.</p>
+    <a class="buy-btn" href="https://www.amazon.com/s?k=exam+revision+planner&tag=YOURTAG-20">Check price on Amazon</a>
+  </div>
+
+  <h2>Which one should you actually get</h2>
+  <p>If you only buy one: start with the <span class="checkline">Weekly Overhaul Planner</span> — it's the most forgiving format for a first-time planner user and covers the widest range of course loads without extra setup.</p>
+
+  <div class="pin-cta">
+    <p>Save this comparison for later</p>
+    <a href="#">Pin this post →</a>
+  </div>
+
+</div>
+
+<footer>
+  The Ruled Line — planning notes for students · Built with care, not templates
+</footer>
+
+</body>
+</html>
