@@ -3,113 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Ruled Line — Desk, Dorm & Study Finds</title>
-<meta name="description" content="Real recommendations for home office, desk setup, study supplies, and dorm room organization — tested, not just photographed.">
+<title>The Ruled Line — Desk, dorm &amp; study notes</title>
+<meta name="description" content="A small editorial blog of desk, dorm, and study product recommendations — the pieces that actually get used, not the ones that just photograph well.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#f6f2ea; --ink:#22283a; --ink-soft:#565f78;
-    --rose:#c17a72; --sage:#8a9a7e; --rule:#d9d0bf;
+    --paper:#f6f2ea;
+    --ink:#22283a;
+    --ink-soft:#565f78;
+    --rose:#c17a72;
+    --sage:#8a9a7e;
+    --rule:#d9d0bf;
+    --card:#fffefb;
   }
   *{box-sizing:border-box;}
   body{
-    margin:0; background:var(--paper);
+    margin:0;
+    background:var(--paper);
     background-image: linear-gradient(var(--rule) 1px, transparent 1px);
-    background-size: 100% 2.1em; background-position: 0 9em;
-    color:var(--ink); font-family:'Work Sans', sans-serif; line-height:1.65;
+    background-size: 100% 2.1em;
+    background-position: 0 8em;
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.65;
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:760px; margin:0 auto; padding:0 24px 100px;}
+  a{color:var(--rose);}
   header.masthead{
-    max-width:760px; margin:0 auto; padding:44px 24px 20px;
-    display:flex; align-items:baseline; justify-content:space-between;
+    max-width:920px; margin:0 auto; padding:40px 24px 18px;
+    display:flex; align-items:baseline; justify-content:space-between; gap:16px;
     border-bottom:2px solid var(--ink);
   }
-  .brand{font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);}
+  .brand{font-family:'Space Mono', monospace; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); text-decoration:none;}
   .brand b{color:var(--ink);}
   .tag{font-family:'Space Mono', monospace; font-size:11px; color:var(--rose); letter-spacing:.06em;}
-  .hero{padding:48px 0 8px;}
-  .eyebrow{font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--rose); margin:0 0 12px;}
-  h1{font-family:'Fraunces', serif; font-weight:600; font-size:clamp(32px, 5.5vw, 48px); line-height:1.1; letter-spacing:-0.01em; margin:0 0 18px;}
-  .hero p{font-size:18px; color:var(--ink-soft); max-width:56ch; margin:0 0 8px;}
-
-  h2.section-label{
-    font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.08em;
-    text-transform:uppercase; color:var(--ink-soft); margin:56px 0 18px;
-    padding-bottom:10px; border-bottom:1px solid var(--rule);
+  .wrap{max-width:920px; margin:0 auto; padding:0 24px 80px;}
+  .hero{padding:48px 0 12px; border-bottom:1px solid var(--rule); margin-bottom:36px;}
+  .eyebrow{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--rose);
+    margin:0 0 12px;
   }
-  .grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-  @media(max-width:560px){.grid{grid-template-columns:1fr;}}
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(36px, 6vw, 64px);
+    line-height:1.08;
+    letter-spacing:-0.02em;
+    margin:0 0 16px;
+  }
+  .dek{font-size:19px; color:var(--ink-soft); max-width:46ch; margin:0;}
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:26px;
+    margin:8px 0 18px;
+  }
+  .section-label{
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--sage);
+    margin:40px 0 10px;
+  }
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
   .card{
-    background:#fffefb; border:1px solid var(--rule); border-left:3px solid var(--sage);
-    border-radius:2px; padding:22px 22px 20px; text-decoration:none; color:var(--ink);
-    display:block; transition:border-color .15s ease, transform .15s ease;
+    display:block;
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:3px solid var(--sage);
+    border-radius:2px;
+    padding:22px 24px 24px;
+    text-decoration:none;
+    color:inherit;
+    transition: transform .18s ease, border-color .18s ease;
   }
-  .card:hover{border-left-color:var(--rose); transform:translateY(-1px);}
-  .card .stat{font-family:'Space Mono', monospace; font-size:11px; color:var(--sage); text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px;}
-  .card h3{font-family:'Fraunces', serif; font-weight:600; font-size:20px; margin:0 0 8px; line-height:1.25;}
-  .card p{font-size:14.5px; color:var(--ink-soft); margin:0;}
-  .card.featured{grid-column:1 / -1; border-left-color:var(--rose);}
-  .card.featured .stat{color:var(--rose);}
-  .card.featured h3{font-size:24px;}
-
+  .card:hover{transform:translateY(-2px); border-color:var(--rose);}
+  .card-featured{
+    grid-column:1 / -1;
+    border-left-color:var(--rose);
+    display:grid;
+    grid-template-columns:minmax(0,1.4fr) minmax(180px, .7fr);
+    gap:20px;
+    align-items:end;
+    padding:28px 28px 30px;
+    background:
+      linear-gradient(90deg, transparent 47px, var(--rule) 47px, var(--rule) 48px, transparent 48px),
+      var(--card);
+  }
+  .sticker{
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--paper);
+    background:var(--rose);
+    display:inline-block;
+    padding:4px 8px;
+    margin-bottom:10px;
+  }
+  .cat{
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--rose);
+    display:block;
+    margin-bottom:8px;
+  }
+  .card h3{
+    font-family:'Fraunces', serif;
+    font-size:22px;
+    font-weight:600;
+    margin:0 0 8px;
+    color:var(--ink);
+  }
+  .card-featured h3{font-size:clamp(26px, 3.4vw, 34px); line-height:1.15;}
+  .card p{margin:0; color:var(--ink-soft); font-size:15px;}
+  .card-meta{
+    font-family:'Space Mono', monospace;
+    font-size:11px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    text-align:right;
+  }
+  .guides .card{border-left-color:var(--rose);}
   footer{
-    max-width:760px; margin:70px auto 0; padding:24px; border-top:2px solid var(--ink);
-    font-family:'Space Mono', monospace; font-size:11.5px; color:var(--ink-soft); text-align:center;
+    max-width:920px; margin:20px auto 0; padding:24px;
+    border-top:2px solid var(--ink);
+    font-family:'Space Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+  @media (max-width:720px){
+    .grid, .card-featured{grid-template-columns:1fr;}
+    .card-meta{text-align:left; margin-top:8px;}
+    header.masthead{flex-wrap:wrap;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .card{transition:none;}
+    .card:hover{transform:none;}
   }
 </style>
 </head>
 <body>
 
 <header class="masthead">
-  <span class="brand"><b>The Ruled Line</b> — desk, dorm & study notes</span>
+  <a class="brand" href="index.html"><b>The Ruled Line</b> — desk, dorm &amp; study notes</a>
   <span class="tag">est. 2026</span>
 </header>
 
 <div class="wrap">
-  <div class="hero">
-    <p class="eyebrow">Start Here</p>
-    <h1>Real finds for the desk, the dorm, and everywhere in between.</h1>
-    <p>Home office upgrades, study supplies, desk setups, and dorm organization — tested for whether they actually get used, not just photographed once.</p>
-  </div>
+  <section class="hero">
+    <p class="eyebrow">An independent study desk notebook</p>
+    <h1>The Ruled Line</h1>
+    <p class="dek">Desk, dorm, and study product notes — the upgrades that earn a permanent spot, not the ones that look good in a single photo and then get shoved in a drawer.</p>
+  </section>
 
-  <h2 class="section-label">Most read</h2>
+  <p class="section-label">Most read</p>
+  <h2>Start here</h2>
   <div class="grid">
-    <a class="card featured" href="home-office-on-a-budget.html">
-      <span class="stat">Home Office</span>
-      <h3>Home Office Upgrades That Don't Cost a Real Paycheck</h3>
-      <p>Small changes that make a home office feel intentional without a full redo.</p>
+    <a class="card card-featured" href="home-office-on-a-budget.html">
+      <div>
+        <span class="sticker">Featured post</span>
+        <span class="cat">Home office</span>
+        <h3>Home Office Upgrades That Don't Cost a Real Paycheck</h3>
+        <p>The highest-performing topic on this site: small, no-drill upgrades that make a corner desk feel intentional without a furniture budget.</p>
+      </div>
+      <div class="card-meta">6 min · Aug 2026<br>Cables · Storage · Light</div>
     </a>
   </div>
 
-  <h2 class="section-label">Browse by topic</h2>
+  <p class="section-label">Main boards</p>
+  <h2>The rest of the notebook</h2>
   <div class="grid">
     <a class="card" href="amazon-study-supplies-finds.html">
-      <span class="stat">Study Supplies</span>
-      <h3>Amazon Study Supplies Worth Adding to Cart</h3>
-      <p>The small stuff that quietly gets reached for every week.</p>
+      <span class="cat">Study supplies</span>
+      <h3>Amazon Study Supplies That Are Actually Worth Adding to Cart</h3>
+      <p>Highlighters, flags, and pocket kits that get reached for every week — not aesthetic clutter.</p>
     </a>
     <a class="card" href="desk-setup-ideas.html">
-      <span class="stat">Desk Setup</span>
+      <span class="cat">Desk setup</span>
       <h3>Desk Setup Ideas for a Space You'll Actually Sit At</h3>
-      <p>Pieces that change how a desk feels to use, not just how it photographs.</p>
+      <p>Not a full teardown — the pieces that change how a desk feels after hour three.</p>
     </a>
     <a class="card" href="study-room-organization.html">
-      <span class="stat">Study Room</span>
+      <span class="cat">Study room</span>
       <h3>Study Room Organization That Doesn't Fall Apart by Week Three</h3>
-      <p>Systems that survive being ignored for a week and still work.</p>
+      <p>Bins, carts, and paper systems that survive being ignored for a week.</p>
     </a>
     <a class="card" href="aesthetic-dorm-room.html">
-      <span class="stat">Dorm Room</span>
-      <h3>Aesthetic Dorm Room Finds That Still Hold Your Stuff</h3>
-      <p>Pretty and functional, built to survive a real semester.</p>
+      <span class="cat">Dorm room</span>
+      <h3>Aesthetic Dorm Room Finds That Still Hold Your Actual Stuff</h3>
+      <p>Pretty and functional aren't opposites. These survive a real semester.</p>
+    </a>
+  </div>
+
+  <p class="section-label">Shared guides</p>
+  <h2>Deep dives used across posts</h2>
+  <div class="grid guides">
+    <a class="card" href="cable-management.html">
+      <span class="cat">From Home Office + Desk Setup</span>
+      <h3>Cable &amp; Cord Management</h3>
+      <p>Trays, clips, sleeves, and a box for the power strip — the unglamorous fix with the biggest visible difference.</p>
+    </a>
+    <a class="card" href="desk-storage-organization.html">
+      <span class="cat">From three boards</span>
+      <h3>Desk Storage &amp; Organization</h3>
+      <p>Risers, trays, and drawers that reclaim surface space without buying new furniture.</p>
+    </a>
+    <a class="card" href="desk-lighting.html">
+      <span class="cat">From Home Office + Desk Setup</span>
+      <h3>Desk Lighting</h3>
+      <p>Warm lamps, monitor bars, and bias light that make a setup look considered on camera.</p>
     </a>
   </div>
 </div>
 
-<footer>The Ruled Line — desk, dorm & study notes · Built with care, not templates</footer>
+<footer>
+  The Ruled Line — desk, dorm &amp; study notes · Built with care, not templates
+</footer>
 
 </body>
 </html>
