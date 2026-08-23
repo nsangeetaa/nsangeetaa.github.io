@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing &amp; Marking Tools — The Ruled Line</title>
+<meta name="description" content="Highlighters, flags, and fine-liners that get used every week.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#f6f2ea;--ink:#22283a;--ink-soft:#565f78;--rose:#c17a72;--sage:#8a9a7e;--rule:#d9d0bf;--card:#fffefb;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);background-image:linear-gradient(var(--rule) 1px, transparent 1px);background-size:100% 2.1em;background-position:0 7.4em;color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px 100px;}
+  header.masthead{max-width:680px;margin:0 auto;padding:40px 24px 18px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--ink);}
+  .brand{font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;}
+  .brand b{color:var(--ink);}
+  .tag{font-family:'Space Mono',monospace;font-size:11px;color:var(--rose);letter-spacing:.06em;}
+  nav.crumbs{max-width:680px;margin:14px auto 0;padding:0 24px;font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);}
+  nav.crumbs a{color:var(--rose);text-decoration:none;}
+  .eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin:30px 0 10px;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,5vw,44px);line-height:1.12;letter-spacing:-0.01em;margin:0 0 16px;}
+  .dek{font-size:18px;color:var(--ink-soft);max-width:56ch;margin:0 0 16px;}
+  .also-on{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin:0 0 22px;}
+  .also-on a{color:var(--rose);text-decoration:none;}
+  .meta{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);display:flex;gap:18px;flex-wrap:wrap;padding-bottom:28px;margin-bottom:8px;border-bottom:1px solid var(--rule);}
+  p{margin:0 0 20px;font-size:16.5px;}
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:26px;margin:44px 0 6px;}
+  .disclosure{background:#fff;border:1px solid var(--rule);border-radius:2px;padding:14px 18px;font-size:13.5px;color:var(--ink-soft);margin:8px 0 36px;}
+  .pick{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
+  .pick-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;border:1px solid var(--rule);margin-bottom:16px;background:var(--paper);}
+  .pick-num{font-family:'Space Mono',monospace;font-size:11px;color:var(--sage);letter-spacing:.08em;text-transform:uppercase;}
+  .pick h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;}
+  .pick .best-for{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin-bottom:12px;line-height:1.5;}
+  .pick p{font-size:15.5px;margin-bottom:14px;}
+  .buy-btn,.guide-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
+  .buy-btn:hover,.guide-btn:hover{background:var(--rose);transform:translateY(-1px);}
+  .buy-btn::after,.guide-btn::after{content:"→";font-family:sans-serif;}
+  .guide-btn{background:var(--rose);}
+  .guide-btn:hover{background:var(--ink);}
+  .teaser{display:block;background:var(--card);border:1.5px dashed var(--rose);border-radius:2px;padding:22px 24px;margin:0 0 18px;text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .15s ease;}
+  .teaser:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(34,40,58,.08);}
+  .teaser-label{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);}
+  .teaser h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;color:var(--ink);}
+  .teaser p{font-size:15.5px;margin-bottom:16px;color:var(--ink-soft);}
+  ul.plain{margin:0 0 28px;padding-left:0;list-style:none;}
+  ul.plain li{padding-left:26px;position:relative;margin-bottom:10px;font-size:15.5px;}
+  ul.plain li::before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border:1.5px solid var(--sage);border-radius:2px;}
+  .pin-cta{margin:52px 0 20px;padding:26px;background:var(--ink);color:var(--paper);border-radius:3px;text-align:center;}
+  .pin-cta p{color:var(--paper);font-size:15px;margin-bottom:14px;opacity:.85;}
+  .pin-cta a{font-family:'Space Mono',monospace;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);background:var(--paper);padding:11px 20px;border-radius:2px;text-decoration:none;display:inline-block;}
+  .related{margin-top:16px;}
+  .related a{display:block;font-size:14.5px;color:var(--ink);padding:10px 0;border-bottom:1px solid var(--rule);text-decoration:none;}
+  .related a:hover{color:var(--rose);}
+  footer{max-width:680px;margin:60px auto 0;padding:24px;border-top:2px solid var(--ink);font-family:'Space Mono',monospace;font-size:11.5px;color:var(--ink-soft);text-align:center;}
+  @media (prefers-reduced-motion: reduce){
+    .buy-btn,.guide-btn,.teaser{transition:none;}
+    .buy-btn:hover,.guide-btn:hover,.teaser:hover{transform:none;}
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <a class="brand" href="index.html"><b>The Ruled Line</b> — desk, dorm &amp; study notes</a>
+  <span class="tag">est. 2026</span>
+</header>
+<nav class="crumbs"><a href="index.html">← All posts</a></nav>
+<div class="wrap">
+  <p class="eyebrow">Study supplies</p>
+  <h1>Writing &amp; Marking Tools</h1>
+  <p class="dek">The stuff you reach for while actually reading and annotating — not a rainbow of stationery that dies in a cup.</p>
+  <p class="also-on">Also featured on: <a href="amazon-study-supplies-finds.html">Amazon Study Supplies Finds</a></p>
+  <div class="meta"><span>5 min read</span><span>Updated Aug 2026</span></div>
+  <div class="disclosure"><strong>A quick note:</strong> Some links on this page are Amazon affiliate links. If you buy through them, this site earns a small commission at no extra cost to you.</div>
+  <p>Caps get lost. Highlighters dry out. Rented textbooks cannot take ink. These four solve those specific annoyances without requiring a refill subscription you will forget.</p>
+  <h2>What to actually look for</h2>
+  <ul class="plain">
+    <li>Survives being left uncapped for an afternoon</li>
+    <li>Marks a textbook you cannot write in, or paper that ghosts</li>
+    <li>A small set you will finish, not a 48-pack you will lose</li>
+    <li>Fits in a pencil case or the front of a backpack</li>
+  </ul>
+  <div class="pick">
+    <span class="pick-num">Pick 01</span>
+    <img class="pick-img" src="images/stabilo-boss-highlighter-set.jpg" alt="STABILO Boss Original chisel-tip highlighter set in yellow, orange, green, and pink">
+    <h3>STABILO Boss Original Highlighter Set</h3>
+    <p class="best-for">Best for: anyone who leaves the cap off mid-highlight and comes back to a dried-out tip</p>
+    <p>Chisel-tip highlighters built with Anti-Dry-Out Technology — rated for hours of cap-off time, so a forgotten cap during a study session doesn't kill the pen. The wedge tip switches between broad highlighting and finer underlining, and the ink is smudge-resistant enough to survive a backpack.</p>
+    <a class="buy-btn" href="https://link.amazon/B0fW1T32O" target="_blank" rel="noopener sponsored">Check price on Amazon</a>
+  </div>
+  <div class="pick">
+    <span class="pick-num">Pick 02</span>
+    <h3>The Retractable Highlighter Set</h3>
+    <p class="best-for">Best for: anyone who loses caps and dries out highlighters in a week</p>
+    <p>Click-top highlighters that don't dry out when left uncapped — the single most common way a highlighter set dies early. A four-color pack is enough; you do not need twelve pastels to mark a textbook.</p>
+    <a class="buy-btn" href="https://www.amazon.com/s?k=retractable+highlighter+set&tag=YOURTAG-20">Check price on Amazon</a>
+  </div>
+  <div class="pick">
+    <span class="pick-num">Pick 03</span>
+    <h3>The Sticky Tab Flag Set</h3>
+    <p class="best-for">Best for: textbook and reading-heavy classes</p>
+    <p>Color-coded page flags for marking key passages without writing in a rented or resale textbook. Assign one color per class and you can find last week's lecture without rereading the chapter.</p>
+    <a class="buy-btn" href="https://www.amazon.com/s?k=sticky+tab+flags+study&tag=YOURTAG-20">Check price on Amazon</a>
+  </div>
+  <div class="pick">
+    <span class="pick-num">Pick 04</span>
+    <h3>The Fine-Liner Pen Set</h3>
+    <p class="best-for">Best for: notes that need to stay readable after a full semester in a backpack</p>
+    <p>A small set of archival-ish fine-liners beats a junk drawer of half-dead ballpoints. They photocopy, they don't blob through cheap notebook paper as badly, and they make problem sets look like you meant them.</p>
+    <a class="buy-btn" href="https://www.amazon.com/s?k=fine+liner+pen+set+study&tag=YOURTAG-20">Check price on Amazon</a>
+  </div>
+  <h2>Bottom line</h2>
+  <p>Start with the STABILO set if you've killed a highlighter by leaving it uncapped before — the anti-dry-out design solves that specific problem. Flags are the second buy the moment a textbook cannot take ink.</p>
+  <div class="pin-cta">
+    <p>Save this for later</p>
+    <a class="pin-link" href="#">Pin this post →</a>
+  </div>
+  <h2 style="margin-top:56px;">More from The Ruled Line</h2>
+  <div class="related">
+    <a href="amazon-study-supplies-finds.html">Amazon Study Supplies Finds →</a>
+    <a href="study-planners.html">Study Planners →</a>
+  </div>
+</div>
+<footer>The Ruled Line — desk, dorm &amp; study notes · Built with care, not templates</footer>
+<script>
+  (function () {
+    var a = document.querySelector('.pin-link');
+    if (!a) return;
+    a.href = 'https://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(location.href) + '&description=' + encodeURIComponent(document.title);
+  })();
+</script>
+</body>
+</html>
