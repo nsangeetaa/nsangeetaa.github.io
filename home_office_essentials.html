@@ -31,12 +31,15 @@
   .pick{background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--sage);border-radius:2px;padding:22px 24px;margin:20px 0 28px;}
   .pick-num{font-family:'Space Mono',monospace;font-size:11px;color:var(--sage);letter-spacing:.08em;text-transform:uppercase;}
   .pick h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin:6px 0 8px;}
+  .pick h3 a{color:var(--ink); text-decoration:none; transition:color .15s ease;}
+  .pick h3 a:hover{color:var(--rose);}
   .pick .best-for{font-family:'Space Mono',monospace;font-size:12px;color:var(--ink-soft);margin-bottom:12px;line-height:1.5;}
   .pick p{font-size:15.5px;margin-bottom:14px;}
   .buy-btn,.guide-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:none;padding:11px 18px;border-radius:2px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
   .buy-btn:hover,.guide-btn:hover{background:var(--rose);transform:translateY(-1px);}
   .buy-btn::after,.guide-btn::after{content:"→";font-family:sans-serif;}
-  .product-image{width:100%; max-width:600px; height:auto; margin-bottom:16px; border:1px solid var(--rule); border-radius:2px; display:block;}
+  .product-image{width:100%; max-width:600px; height:auto; margin-bottom:16px; border:1px solid var(--rule); border-radius:2px; display:block; transition:transform .15s ease, box-shadow .15s ease;}
+  .product-image:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(34,40,58,.08);}
   footer{max-width:680px;margin:60px auto 0;padding:24px;border-top:2px solid var(--ink);font-family:'Space Mono',monospace;font-size:11.5px;color:var(--ink-soft);text-align:center;}
 </style>
 </head>
@@ -55,10 +58,12 @@
   
   <div class="pick">
     <span class="pick-num">Top Pick</span>
-    <h3>Plexda Adjustable Foot Rest with Massage Texture</h3>
+    <h3><a href="https://link.amazon/B0bu8xDeH" target="_blank" rel="noopener noreferrer">Plexda Adjustable Foot Rest with Massage Texture</a></h3>
     <p class="best-for">Best for: Relieving muscle tension, fixing desk posture, and promoting circulation.</p>
     
-    <img src="THE DESK UPGRADE YOU DIDN'T KNOW YOU NEEDED (1).jpg" alt="Plexda Adjustable Foot Rest" class="product-image">
+    <a href="https://link.amazon/B0bu8xDeH" target="_blank" rel="noopener noreferrer">
+      <img src="images/THE DESK UPGRADE YOU DIDN'T KNOW YOU NEEDED (1).jpg" alt="Plexda Adjustable Foot Rest" class="product-image">
+    </a>
     
     <p>Finding a comfortable seated position often involves compromising between monitor height and foot placement. The Plexda Adjustable Foot Rest bridges that gap. Built from sturdy Acrylonitrile Butadiene Styrene (ABS), it's highly durable yet remains portable and easily detachable when you need to store it or move it to the sofa.</p>
     
@@ -67,7 +72,7 @@
     <p>By slightly elevating your feet, it evenly disperses pressure, relieves sore muscles, and promotes healthy blood circulation, keeping your legs from feeling heavy at the end of the day.</p>
     
     <p><strong>Current Deal:</strong> ₹1,543.00 (69% off M.R.P. ₹4,950.00)</p>
-    <a href="https://link.amazon/B0bu8xDeH" class="buy-btn">Check on Amazon</a>
+    <a href="https://link.amazon/B0bu8xDeH" target="_blank" rel="noopener noreferrer" class="buy-btn">Check on Amazon</a>
   </div>
 </div>
 <footer>The Ruled Line — desk, dorm &amp; study notes · Built with care, not templates</footer>
